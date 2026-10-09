@@ -1,0 +1,27 @@
+Nexa Business Suite 4.2.3 - Java 11 PowerShell Hotfix
+
+ROOT CAUSE:
+PowerShell is case-insensitive. $home and $HOME are the same variable, and $HOME is read-only.
+The old script assigned to $home in three places, stopping detection.
+
+FIXES:
+- Renamed all conflicted PowerShell local variables.
+- Java version is read with .NET ProcessStartInfo (no native-stderr parsing exception).
+- Path with spaces (C:\Program Files\Eclipse Adoptium\...) is supported.
+- Both Java discovery and portable auto-install are updated.
+- Diagnostics of Java detection are written to logs/bootstrap.log.
+- A TEST-JAVA.bat check is included to avoid unnecessary downloads.
+
+IMPORTANT:
+This package contains SOURCE CODE, not a precompiled Spring Boot executable JAR.
+FIRST-RUN.bat must succeed once on the target PC and build the JAR.
+The actual Windows/JDK/MySQL environment and Maven build cannot be fully validated from Linux.
+
+STEPS:
+1. Extract to a NEW folder.
+2. Double click TEST-JAVA.bat (should pass with your installed Eclipse Adoptium 11).
+3. Double click FIRST-RUN.bat (prepares MySQL and runs Maven tests).
+4. Double click START-PRESENTATION.bat.
+5. Double click VERIFY-PRESENTATION.bat while server is running.
+
+If an error occurs, run collect-error-log.bat and upload its ZIP report.

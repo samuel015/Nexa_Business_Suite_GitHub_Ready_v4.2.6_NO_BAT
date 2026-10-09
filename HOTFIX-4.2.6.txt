@@ -1,0 +1,4 @@
+Memperbaiki Unsupported Database: MySQL 5.5 pada XAMPP MariaDB 10.4.27.
+Menggunakan profile MariaDB khusus, driver MariaDB, Flyway mysql module 8.5.13,
+migration SQL MariaDB, dan setup XAMPP root tanpa password.
+Perubahan tidak menghapus database existing.

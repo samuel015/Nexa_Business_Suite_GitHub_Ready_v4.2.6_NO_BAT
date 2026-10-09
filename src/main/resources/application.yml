@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: nexa-business-suite
+  profiles:
+    default: mariadb
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: false
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    baseline-on-migrate: false
+    locations: classpath:db/migration/{vendor}
+  thymeleaf:
+    cache: false
+
+server:
+  port: ${APP_PORT:8080}
+  address: ${APP_BIND_ADDRESS:127.0.0.1}
+  servlet:
+    session:
+      timeout: 8h
+      cookie:
+        http-only: true
+        same-site: lax
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  info:
+    env:
+      enabled: true
+  endpoint:
+    health:
+      show-details: never
+
+info:
+  app:
+    name: Nexa Business Suite
+    version: 4.2.6
+    stack: Spring Boot 2.7.18 / Java 11
+    java: Java 11
+
+logging:
+  file:
+    name: logs/app.log
+  level:
+    root: INFO
+    org.springframework.security: WARN
+    com.nexa.business: INFO

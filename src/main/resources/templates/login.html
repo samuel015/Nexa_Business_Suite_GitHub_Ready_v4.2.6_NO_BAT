@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1220">
+  <title>Masuk | Nexa Business Suite</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?v=4.2.4">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-visual">
+      <div class="brand-lockup"><span class="brand-logo">N</span><div><strong>Nexa Business</strong><small>Operations Suite</small></div></div>
+      <div class="auth-copy"><span class="kicker light">BUSINESS OPERATIONS PLATFORM</span><h1>Lima workspace berbeda untuk lima tanggung jawab bisnis yang berbeda.</h1><p>Admin, Owner, Manager, Kasir, dan Gudang sekarang memiliki route, menu, dashboard, modul, dan alur kerja yang benar-benar terpisah.</p></div>
+      <div class="auth-points"><div><strong>5</strong><span>workspace terpisah</span></div><div><strong>5</strong><span>frontend role-specific</span></div><div><strong>DB</strong><span>PostgreSQL / MySQL</span></div></div>
+      <small class="auth-foot">Nexa Business Suite v4.2.4 • Java 11 • Spring Boot 2.7.18</small>
+    </section>
+    <section class="auth-form-wrap">
+      <div class="auth-card">
+        <div class="mobile-brand"><span class="brand-logo">N</span><strong>Nexa Business</strong></div>
+        <span class="kicker">SECURE ACCESS</span><h2>Selamat datang kembali</h2><p class="muted">Masuk sesuai role untuk membuka workspace Anda.</p>
+        <form id="loginForm" autocomplete="on">
+          <label>Username<input id="username" name="username" autocomplete="username" placeholder="Masukkan username" required></label>
+          <label>Password<div class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Masukkan password" required><button id="togglePassword" class="text-button" type="button">Lihat</button></div></label>
+          <div id="loginError" class="alert danger" hidden></div>
+          <button id="loginButton" class="button primary xl" type="submit"><span>Masuk ke Workspace</span><b>→</b></button>
+        </form>
+        <div class="demo-accounts"><p>5 akun siap pakai</p>
+          <button type="button" data-user="admin" data-pass="admin123"><span><b>Administrator</b><small>Full system control</small></span><code>admin / admin123</code></button>
+          <button type="button" data-user="owner" data-pass="owner123"><span><b>Business Owner</b><small>Executive KPI, reports & audit</small></span><code>owner / owner123</code></button>
+          <button type="button" data-user="manager" data-pass="manager123"><span><b>Operations Manager</b><small>Operational master data & reports</small></span><code>manager / manager123</code></button>
+          <button type="button" data-user="kasir" data-pass="kasir123"><span><b>Staff Kasir</b><small>POS, pricing & transaction history</small></span><code>kasir / kasir123</code></button>
+          <button type="button" data-user="gudang" data-pass="gudang123"><span><b>Staff Gudang</b><small>Inventory, stock & goods movement</small></span><code>gudang / gudang123</code></button>
+        </div>
+        <div class="security-note">Session aman • Cookie HttpOnly • Role-based access</div>
+      </div>
+    </section>
+  </main>
+  <script src="/login.js?v=4.2.4"></script>
+</body></html>

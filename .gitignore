@@ -1,0 +1,33 @@
+# Maven / Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Local configuration / secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# Runtime / diagnostics
+*.log
+logs/*.log
+diagnostics/*.zip
+hs_err_pid*
+
+# OS / temporary
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+.tools/

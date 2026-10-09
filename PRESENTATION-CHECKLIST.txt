@@ -1,0 +1,27 @@
+NEXA BUSINESS SUITE v4.2.6 - PRESENTATION CHECKLIST
+
+SEHARI SEBELUM PRESENTASI
+1. Pastikan MySQL Server aktif.
+2. Double-click FIRST-RUN.bat.
+3. Tunggu sampai muncul: PC SIAP UNTUK PRESENTASI.
+4. Double-click START-PRESENTATION.bat.
+5. Setelah browser terbuka, double-click VERIFY-PRESENTATION.bat.
+6. Pastikan muncul: 5 role + dashboard verification PASSED.
+
+SAAT PRESENTASI
+1. Start MySQL Server jika belum aktif.
+2. Double-click START-PRESENTATION.bat.
+3. Jangan tutup CMD.
+4. Browser akan terbuka otomatis.
+
+AKUN DEMO
+admin / admin123
+owner / owner123
+manager / manager123
+kasir / kasir123
+gudang / gudang123
+
+TROUBLESHOOTING
+- Jika gagal, jalankan collect-error-log.bat.
+- Upload ZIP di folder diagnostics ke ChatGPT.
+- Spring Tool Suite TIDAK diperlukan untuk menjalankan aplikasi.

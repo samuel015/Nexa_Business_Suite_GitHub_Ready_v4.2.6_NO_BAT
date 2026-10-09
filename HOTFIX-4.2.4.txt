@@ -1,0 +1,31 @@
+NEXA BUSINESS SUITE v4.2.6 - MYSQL CONNECTOR DEPENDENCY HOTFIX
+
+Masalah yang diperbaiki:
+[ERROR] 'dependencies.dependency.version' for mysql:mysql-connector-java:jar is missing.
+
+Penyebab:
+Spring Boot 2.7.18 mengelola dependency driver MySQL dengan Maven coordinates:
+  com.mysql:mysql-connector-j
+bukan versi lama:
+  mysql:mysql-connector-java
+
+Perbaikan pom.xml:
+  <groupId>com.mysql</groupId>
+  <artifactId>mysql-connector-j</artifactId>
+  <scope>runtime</scope>
+
+Versi mysql-connector-j mengikuti Spring Boot BOM (8.0.33).
+Tidak perlu reinstall JDK, Maven, atau MySQL.
+
+Langkah menjalankan:
+1. Ekstrak ZIP ke folder BARU (jangan menimpa versi lama).
+2. Jalankan CHECK-POM.bat (tidak memerlukan server MySQL).
+3. Jalankan FIRST-RUN.bat sekali untuk setup database + build/test.
+4. Jika sudah sukses, jalankan START-PRESENTATION.bat.
+5. Jalankan VERIFY-PRESENTATION.bat untuk mengecek login dan dashboard.
+
+Jika build masih gagal, lampirkan logs/launcher.log atau diagnostics ZIP.
+Jangan menggunakan file JAR dari versi 4.2.3 untuk versi ini.
+
+QA: Perbaikan POM + pemeriksaan struktur/ZIP telah dilakukan.
+Full Maven build tidak tersedia di environment packaging karena Maven Central tidak bisa diakses.

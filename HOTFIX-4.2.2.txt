@@ -1,0 +1,12 @@
+NEXA BUSINESS SUITE v4.2.3 - AUTO JDK 11 HOTFIX
+================================================
+
+Perubahan utama:
+- Jika JDK 11 tidak ditemukan, launcher mengunduh Temurin/OpenJDK 11 portable otomatis.
+- Instalasi portable disimpan di .tools\jdk11 dan tidak memerlukan hak Administrator.
+- Path Java dengan spasi tetap didukung.
+- Deteksi JDK memeriksa JAVA_HOME, PATH, registry, lokasi vendor umum, dan JDK portable.
+- START-PRESENTATION.bat menampilkan proses deteksi/download agar tidak terlihat hang.
+- INSTALL-JAVA-AUTO.bat tersedia untuk menyiapkan Java secara manual sebelum presentasi.
+
+Koneksi internet hanya dibutuhkan bila JDK 11 memang belum tersedia pada komputer.

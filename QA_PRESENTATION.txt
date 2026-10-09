@@ -1,0 +1,20 @@
+NEXA BUSINESS SUITE v4.2.6 - PACKAGE QA
+========================================
+
+Static/package validation completed:
+- pom.xml XML parsing: OK
+- YAML application profiles: OK
+- JavaScript syntax (all role workspaces): OK
+- Windows BAT files: CRLF OK
+- MySQL profile is default: OK
+- MySQL setup SQL included: OK
+- FIRST-RUN / BUILD-PRESENTATION / START-PRESENTATION workflow included: OK
+- Dynamic free-port selection 8080-8090 included: OK
+- 5-role verification script included: OK
+- Error log + diagnostic bundle collector included: OK
+
+Important:
+Full Maven compile/test cannot be executed in the packaging environment because
+external Maven repositories are not reachable from that environment. Run
+FIRST-RUN.bat on the presentation PC while online once; it runs `mvn clean verify`
+and will only report the PC ready after the build/tests pass.

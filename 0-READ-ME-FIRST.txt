@@ -1,0 +1,13 @@
+NEXA BUSINESS SUITE v4.2.6 - XAMPP MARIADB 10.4.27
+
+1. Jangan memakai folder lama v4.2.4.
+2. Pastikan MySQL XAMPP sudah START.
+3. Double-click MULAI-DI-SINI.bat untuk setup + build.
+4. Kalau sukses, double-click START-PRESENTATION.bat.
+5. Kalau web belum tampil, jalankan collect-error-log.bat dan kirim ZIP.
+
+Database: MariaDB 10.4.27, bukan MySQL 8.
+Profile: mariadb
+Java: 11
+Framework: Spring Boot 2.7.18
+Flyway MySQL/MariaDB module: 8.5.13
